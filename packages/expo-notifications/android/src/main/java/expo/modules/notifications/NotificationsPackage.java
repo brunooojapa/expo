@@ -11,6 +11,7 @@ import java.util.List;
 
 import expo.modules.notifications.notifications.NotificationManager;
 import expo.modules.notifications.notifications.NotificationsEmitter;
+import expo.modules.notifications.notifications.NotificationsHandler;
 import expo.modules.notifications.tokens.PushTokenManager;
 import expo.modules.notifications.tokens.PushTokenModule;
 
@@ -19,7 +20,8 @@ public class NotificationsPackage extends BasePackage {
   public List<ExportedModule> createExportedModules(Context context) {
     return Arrays.asList(
         new PushTokenModule(context),
-        new NotificationsEmitter(context)
+        new NotificationsEmitter(context),
+        new NotificationsHandler(context)
     );
   }
 
